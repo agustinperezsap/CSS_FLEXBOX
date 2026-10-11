@@ -26,12 +26,12 @@ nav ul {
     border: 2px solid #000;
 }
 
-@media (prefers-color-scheme:dark){
+/* @media (prefers-color-scheme:dark){
     body {
         background-color: #121212;
         color: #e0e0e0;
     }
-}
+} */
 
 h2 {
     font-size: clamp(1.5rem, 2vw, 2rem);
@@ -49,4 +49,47 @@ h2 {
     animation: latido-corazon 1.5s infinite; /* ¡El corazón latirá por siempre! */
     display: flex;
     justify-content: center;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.contenedor-tarjetas{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.tarjeta {
+    width: 200px;
+    height: 150px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.spinner{
+    border: 8px solid #eee; /* Color de fondo del spinner */
+    border-top: 8px solid #3498db; /* Color del borde superior */
+    border-radius: 50%; /* Hacer que el spinner sea circular */
+    width: 60px; /* Ancho del spinner */
+    height: 60px; /* Alto del spinner */
+    animation: girar 1s linear infinite; /* Animación de giro */
+    margin: auto;
+    padding: 1rem;
+}
+
+@keyframes girar {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
